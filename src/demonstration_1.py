@@ -21,5 +21,18 @@ Explanation:
 There is no index that satisfies the conditions in the problem statement.
 """
 def pivot_index(nums):
-    # Your code here
+    print(nums)
+    for i in range(1,len(nums)):
+        # print(i)
+        # print(sum(nums[:(i)]))
+        # print(sum(nums[(i+1):len(nums)]))
+        if sum(nums[:(i)]) == sum(nums[(i+1):len(nums)]):
+            result = i
+            break
+        else:
+            result = -1
+    print(result)
+    return result
+    
+pivot_index([1,2,3,20,6,26])
 
